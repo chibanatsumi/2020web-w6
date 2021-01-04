@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Practice</title>
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background: skyblue;
+      cursor: pointer;
+      transition: 0.8s;
+      margin: 0 8px 8px 0;
+      text-align: center;
+      line-height: 100px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <input id="omikuji_btn" type="button" value="おみくじを引く">
+    <script>
+        document.getElementById( "omikuji_btn" ).onclick = function() {
+            var rnd = Math.floor( Math.random() * 10 ); //0~9
+            var omikuji;
+            if (rnd === 0) omikuji = "大吉";
+            if (rnd === 1) omikuji = "吉";
+            if (rnd === 2) omikuji = "中吉";
+            if (rnd === 3) omikuji = "小吉";
+            if (rnd === 4) omikuji = "末吉";
+            if (rnd === 5) omikuji = "凶";
+            if (rnd === 6) omikuji = "吉";
+            if (rnd === 7) omikuji = "中吉";
+            if (rnd === 8) omikuji = "小吉";
+            if (rnd === 9) omikuji = "大凶";
+            alert(omikuji);
+        }
+    </script>
+</body>
+</html>
