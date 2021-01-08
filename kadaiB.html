@@ -18,14 +18,6 @@
       text-align: center;
       line-height: 100px;
     }
-    .win {
-      background: pink;
-      border-radius: 50%;
-      transform: rotate(360deg);
-    }
-    .lose {
-      transform: scale(0.9);
-    }
   </style>
 </head>
 <body>
@@ -33,21 +25,45 @@
     <script>
       'use strict';
       
-            const num = 10;
-            const winner = Math.floor(Math.random() * num); // 0 - 4
+            const num = Math.floor(Math.random() * 10); // 0 - 9
 
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
       div.classList.add('box');
       
       div.addEventListener('click', () => {
-        if (i === winner) {
-          div.textContent = '大吉';
-          div.classList.add('win');
-        } else {
-          div.textContent = '吉';
-          div.classList.add('lose');
-        } 
+        swith(num){
+          case 0:
+           div.textContent = '大吉';
+           break;
+          case 1:
+           div.textContent = '吉';
+           break;
+          case 2:
+           div.textContent = '中吉';
+           break;
+          case 3:
+           div.textContent = '小吉';
+           break;
+          case 4:
+           div.textContent = '末吉';
+           break;
+          case 5:
+           div.textContent = '凶';
+           break;
+          case 6:
+           div.textContent = '大凶';
+           break;
+          case 7:
+           div.textContent = '吉';
+           break;
+          case 8:
+           div.textContent = '中吉';
+           break;
+          case 9:
+           div.textContent = '小吉';
+           break;
+        }
       });
 
       document.body.appendChild(div);
